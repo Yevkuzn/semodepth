@@ -53,8 +53,12 @@ def predict():
                 #Save predicitons as.mat file
                 savename = _savename[0]
                 sio.savemat(savename, {"mat":_prediction})
-            except:
-                print("Finished")
+            except Exception as e:
+                #check if the error is caused by the absense of data to iterate through
+                if e.message.find("End of sequence") != -1:
+                    print("Finished")
+                else:
+                    print(str(e))
                 break
 
 
