@@ -19,6 +19,6 @@ tf.app.flags.DEFINE_integer('inference_image_height', 188, """Height of the imag
 tf.app.flags.DEFINE_integer('inference_image_width', 621, """Width of the image for inference.""")
 
 tf.app.flags.DEFINE_string('filenames_path', "...", """Path to file contatining input-output names.""")
-tf.app.flags.DEFINE_string('chkpt_path', "...", """Path to saved model""")
+tf.app.flags.DEFINE_string('chkpt_path', "...", """Path to saved model without extension""")
 
 tf.app.flags.DEFINE_float('bf', 359.7176277195809831 * 0.54, """Baseline times focal length""")
